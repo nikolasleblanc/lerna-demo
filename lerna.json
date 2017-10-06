@@ -1,0 +1,12 @@
+{
+  "lerna": "2.2.0",
+  "packages": ["packages/*"],
+  "version": "independent",
+  "registry": "http://138.197.169.184:4873",
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore: Publish"
+    }
+  }
+}

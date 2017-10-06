@@ -1,0 +1,39 @@
+{
+  "devDependencies": {
+    "@types/jest": "^21.1.0",
+    "conventional-changelog": "^1.1.5",
+    "cz-lerna-changelog": "^1.2.1",
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "jest-cli": "^21.1.0",
+    "lerna": "^2.2.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^21.0.1",
+    "tslint": "^5.7.0",
+    "tslint-config-standard": "^6.0.1",
+    "typescript": "^2.5.2",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "scripts": {
+    "deps:clean": "rimraf node_modules && lerna clean --yes",
+    "deps:install": "npm install && npm run bootstrap",
+    "bootstrap": "lerna bootstrap",
+    "prepublish": "lerna run build && npm test",
+    "publish": "lerna publish --yes",
+    "reset": "npm run deps:clean && npm run deps:install",
+    "build": "lerna run build",
+    "nsp": "lerna run nsp",
+    "jest": "jest --config ./jest.config.json",
+    "dev:jest": "npm run jest -- --watch",
+    "dev:build": "npm run build -- -w",
+    "test": "npm run jest && npm run lint",
+    "commitmsg": "validate-commit-msg",
+    "lint": "tslint packages/**/src --project tsconfig.json",
+    "prettier": "prettier --config ./.prettierrc --write 'packages/**/*.ts'"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@nik/nameotron",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/faker": "^4.1.1",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@nik/citynames": "^0.0.0",
+    "@nik/teamnames": "^0.0.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "moduleFileExtensions": ["ts", "tsx", "js"],
+  "transform": {
+    "^.+\\.(ts|tsx)?$": "./node_modules/ts-jest/preprocessor.js"
+  },
+  "testMatch": ["**/*.spec.(ts|tsx|js)"],
+  "mapCoverage": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": ["packages/**/src/**/*.{ts,tsx}"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 90,
+      "functions": 90,
+      "lines": 90,
+      "statements": 90
+    }
+  }
+}
