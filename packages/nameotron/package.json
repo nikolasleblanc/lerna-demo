@@ -1,6 +1,6 @@
 {
   "name": "@nik/nameotron",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,7 +14,7 @@
     "typescript": "^2.5.2"
   },
   "dependencies": {
-    "@nik/citynames": "^0.0.0",
-    "@nik/teamnames": "^0.0.0"
+    "@nik/citynames": "^0.0.1",
+    "@nik/teamnames": "^0.0.1"
   }
 }
